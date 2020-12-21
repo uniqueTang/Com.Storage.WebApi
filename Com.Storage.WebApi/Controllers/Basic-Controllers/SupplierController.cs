@@ -15,7 +15,7 @@ namespace Com.Storage.WebApi.Controllers.Basic_Controllers
     public class SupplierController : ApiController
     {
         public IHttpActionResult Get() 
-        { 
+        {
             var supplierService = new SupplierService();
             var supplierList = supplierService.GetAll().Where(item => item.IsDelete != 1);
             return Json(supplierList);
